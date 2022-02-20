@@ -1,0 +1,88 @@
+[
+    {
+        "Topic": "About",
+        "ca1": "Overview",
+        "l1": "/About/Overview",
+        "ca2": "History",
+        "l2": "/About/History",
+        "ca3": "Founders",
+        "l3": "/About/Founders",
+        "ca4": "Traditions",
+        "l4": "/About/Traditions",
+        "ca5": "Past Principals",
+        "l5": "/About/Principles"
+    },
+    {
+        "Topic": "Management",
+        "ca1": "Richmond Principal",
+        "l1": "https://yasiru.online/",
+        "ca2": "Administration",
+        "l2": "https://yasiru.online/",
+        "ca3": "Prefect Body",
+        "l3": "https://yasiru.online/"
+    },
+    {
+        "Topic": "School",
+        "ca1": "Colege Anthem / Flag / Crest",
+        "l1": "https://yasiru.online/",
+        "ca2": "Clubs & Socities",
+        "l2": "https://yasiru.online/",
+        "ca3": "Games",
+        "l3": "https://yasiru.online/",
+        "ca4": "Examination Results",
+        "l4": "https://yasiru.online/"
+    },
+    {
+        "Topic": "Academic",
+        "ca1": "Past Papers",
+        "l1": "https://yasiru.online/",
+        "ca2": "Assignments",
+        "l2": "https://yasiru.online/",
+        "ca3": "Spoken English",
+        "l3": "https://yasiru.online/",
+        "ca4": "Apply Advanced Level 2023",
+        "l4": "https://yasiru.online/",
+        "ca5": "Student data format",
+        "l5": "https://yasiru.online/",
+        "ca6": "144th Prize winners",
+        "l6": "https://yasiru.online/",
+        "ca7": "Techers",
+        "l7": "https://yasiru.online/",
+        "ca8": "2021 Grade 1 Student’s Admission",
+        "l8": "https://yasiru.online/",
+        "ca9": "Results Analysis",
+        "l9": "https://yasiru.online/"
+    },
+    {
+        "Topic": "Lover’s Quarel",
+        "ca1": "Cureent Team",
+        "l1": "https://yasiru.online/",
+        "ca2": "2019 Comentry",
+        "l2": "https://yasiru.online/",
+        "ca3": "Later Teams",
+        "l3": "https://yasiru.online/",
+        "ca4": "The Season",
+        "l4": "https://yasiru.online/"
+    },
+    {
+        "Topic": "Contact",
+        "ca1": "The Principal",
+        "l1": "https://yasiru.online/",
+        "ca2": "Office",
+        "l2": "https://yasiru.online/",
+        "ca3": "Primary Office",
+        "l3": "https://yasiru.online/",
+        "ca4": "Grade 6/7/8 Office",
+        "l4": "https://yasiru.online/",
+        "ca5": "Grade 9/10/11 Office",
+        "l5": "https://yasiru.online/",
+        "ca6": "A/L Section Office",
+        "l6": "https://yasiru.online/"
+    },
+    {
+        "Topic": "News & Articles",
+        "style": "sec",
+        "l1": "https://yasiru.online/"
+    }
+    
+]
