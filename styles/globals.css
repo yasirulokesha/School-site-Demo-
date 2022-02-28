@@ -20,6 +20,11 @@
   src: url(/Fonts/Roboto-Bold.ttf);
 }
 
+@font-face {
+  font-family: 'old';
+  src: url(/Fonts/old-english.ttf);
+}
+
 html,
 body {
   padding: 0;
@@ -60,6 +65,14 @@ body {
 .nav_ct{
   font-family: "medium";
   font-size: 11pt;
+  color: #000;
+  cursor: pointer;
+  margin: 7px;
+}
+
+.sec_ct{
+  font-family: "bold";
+  font-size: 15pt;
   color: #000;
   cursor: pointer;
   margin: 7px;

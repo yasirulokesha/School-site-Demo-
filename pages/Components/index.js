@@ -1,4 +1,4 @@
-import { Container, Grid, TextField, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 import categories from '../Data/categories.json';
@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import IconButton from '@mui/material/IconButton';
-import { useState } from 'react';
+import { useState , useCallback } from 'react';
 import Link from 'next/link';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Stack from '@mui/material/Stack';
@@ -16,6 +16,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {createTheme} from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import ImageViewer from "react-simple-image-viewer";
 
 //Theming
 
@@ -225,29 +226,29 @@ export function Navbar(){
 
 export function Sections(){
     return(
-        <Box bgcolor="#93E5FF" width="100vw">
-        <Grid container maxWidth="lg" bgcolor="#93E5FF" mr="auto" ml="auto">
-                {categories.map(get=>{
-                   return(
-                       <Grid item>
-                            <ul key={get.Topic}>
-                                <div className='nav_ct'>{get.Topic}</div>
-                                <li className='cont'>
-                                    <Link href={`${(get.l1)}`}><a>{get.ca1}</a></Link>
-                                    <Link href={`${(get.l2)}`}><a>{get.ca2}</a></Link>
-                                    <Link href={`${(get.l3)}`}><a>{get.ca3}</a></Link>
-                                    <Link href={`${(get.l4)}`}><a>{get.ca4}</a></Link>
-                                    <Link href={`${(get.l5)}`}><a>{get.ca5}</a></Link>
-                                    <Link href={`${(get.l6)}`}><a>{get.ca6}</a></Link>
-                                    <Link href={`${(get.l7)}`}><a>{get.ca7}</a></Link>
-                                    <Link href={`${(get.l8)}`}><a>{get.ca8}</a></Link>
-                                    <Link href={`${(get.l9)}`}><a>{get.ca9}</a></Link>
-                                </li>
-                            </ul>
-                        </Grid>
-                    )
-                })}                 
-        </Grid>
+        <Box bgcolor="#93E5FF" width="100vw" padding={5}>
+            <Grid container maxWidth="lg" bgcolor="#93E5FF" mr="auto" ml="auto">
+                    {categories.map(get=>{
+                    return(
+                        <Grid item>
+                                <ul key={get.Topic}>
+                                    <div className='sec_ct'>{get.Topic}</div>
+                                    <li className='cont'>
+                                        <Link href={`${(get.l1)}`}><a>{get.ca1}</a></Link>
+                                        <Link href={`${(get.l2)}`}><a>{get.ca2}</a></Link>
+                                        <Link href={`${(get.l3)}`}><a>{get.ca3}</a></Link>
+                                        <Link href={`${(get.l4)}`}><a>{get.ca4}</a></Link>
+                                        <Link href={`${(get.l5)}`}><a>{get.ca5}</a></Link>
+                                        <Link href={`${(get.l6)}`}><a>{get.ca6}</a></Link>
+                                        <Link href={`${(get.l7)}`}><a>{get.ca7}</a></Link>
+                                        <Link href={`${(get.l8)}`}><a>{get.ca8}</a></Link>
+                                        <Link href={`${(get.l9)}`}><a>{get.ca9}</a></Link>
+                                    </li>
+                                </ul>
+                            </Grid>
+                        )
+                    })}                 
+            </Grid>
         </Box>
     )
 }
@@ -334,3 +335,47 @@ export function Body({children}){
 
 //SubNavigations
 
+
+
+//PhotoLookup
+
+export function PhotoLookup({children}){
+
+    const [currentImage, setCurrentImage] = useState(0);
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const x = [{children}]
+
+    const openImageViewer = useCallback((index) => {
+        setCurrentImage(index);
+        setIsViewerOpen(true);
+    }, []);
+
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
+
+    return (
+        <div>
+        <Box width="150px" height="200px" display="flex" justifyContent="center" sx={{overflow: "hidden" , borderRadius: "5px", margin: "10px", filter: "drop-shadow(0px 0px 5px #0005)"}}>
+            <img
+            src={children}
+            onClick={() => openImageViewer()}
+            height="200px"
+        />
+        </Box>
+        {x}
+        {isViewerOpen && (
+            <ImageViewer
+            src= {children}
+            onClose={closeImageViewer}
+            disableScroll={ true }
+            closeOnClickOutside={ true }
+            backgroundStyle={{
+                backgroundColor: "rgba(0,0,0,0.9)"
+            }}
+            />
+        )}
+        </div>
+    );
+}
