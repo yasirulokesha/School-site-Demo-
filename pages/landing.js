@@ -10,15 +10,10 @@ export default function Landing(){
             <Cover/>
             <Body>
                 <Stack direction="row">
-                <PhotoLookup>
-                {'./Sample1.jpg'}
-                </PhotoLookup><PhotoLookup>
-                {'./Sample1.jpg'}
-                </PhotoLookup><PhotoLookup>
-                {'./Sample1.jpg'}
-                </PhotoLookup>
+                    <Typography fontSize="20pt">"</Typography>
+                    <Typography fontSize="20pt">All for Richmond None for Self</Typography>
+                    <Typography fontSize="20pt">"</Typography>
                 </Stack>
-                <h1>Hello</h1>
             </Body>
             <Footer/>
         </>

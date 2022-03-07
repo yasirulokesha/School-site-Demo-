@@ -327,7 +327,7 @@ export function Footer(){
 
 export function Body({children}){
     return(
-        <Container maxWidth="lg" ml="auto" mr="auto">
+        <Container maxWidth="lg" display="flex" justifyContent="center" ml="auto" mr="auto">
             {children}
         </Container>
     )
@@ -340,42 +340,14 @@ export function Body({children}){
 //PhotoLookup
 
 export function PhotoLookup({children}){
-
-    const [currentImage, setCurrentImage] = useState(0);
-    const [isViewerOpen, setIsViewerOpen] = useState(false);
-    const x = [{children}]
-
-    const openImageViewer = useCallback((index) => {
-        setCurrentImage(index);
-        setIsViewerOpen(true);
-    }, []);
-
-    const closeImageViewer = () => {
-        setCurrentImage(0);
-        setIsViewerOpen(false);
-    };
-
     return (
         <div>
         <Box width="150px" height="200px" display="flex" justifyContent="center" sx={{overflow: "hidden" , borderRadius: "5px", margin: "10px", filter: "drop-shadow(0px 0px 5px #0005)"}}>
             <img
             src={children}
-            onClick={() => openImageViewer()}
             height="200px"
-        />
-        </Box>
-        {x}
-        {isViewerOpen && (
-            <ImageViewer
-            src= {children}
-            onClose={closeImageViewer}
-            disableScroll={ true }
-            closeOnClickOutside={ true }
-            backgroundStyle={{
-                backgroundColor: "rgba(0,0,0,0.9)"
-            }}
             />
-        )}
+        </Box>
         </div>
     );
 }
