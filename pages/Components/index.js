@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import IconButton from '@mui/material/IconButton';
-import { useState , useCallback } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Stack from '@mui/material/Stack';
@@ -16,7 +16,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {createTheme} from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
-import ImageViewer from "react-simple-image-viewer";
 
 //Theming
 
@@ -327,7 +326,7 @@ export function Footer(){
 
 export function Body({children}){
     return(
-        <Container maxWidth="lg" display="flex" justifyContent="center" ml="auto" mr="auto">
+        <Container maxWidth="lg" sx={{display:"flex", flexDirection: "row", justifyContent:"center"}}>
             {children}
         </Container>
     )

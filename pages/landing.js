@@ -41,10 +41,10 @@ export function Cover(){
             }}
         >
             <div style={{zIndex:'20', position:"absolute",display:'flex',justifyContent:"center",alignItems:'center',    width: "-webkit-fill-available",height: "-webkit-fill-available", textAlign:'center', flexDirection:"column"}}>
-                <Typography fontFamily="bold" lineHeight="0.9" color="#FFF" letterSpacing="0" fontSize="60pt" letterSpacing="-3px">Welcome to<br/>
+                <Typography fontFamily="bold" lineHeight="0.9" color="#FFF" fontSize="60pt" letterSpacing="-3px">Welcome to<br/>
                     Richmond College
                 </Typography>
-                <Typography fontFamily="old" lineHeight="0.9" color="#FFF" letterSpacing="0" fontSize="35pt" letterSpacing="-3px">
+                <Typography fontFamily="old" lineHeight="0.9" color="#FFF" fontSize="35pt" letterSpacing="-3px">
                     Nisi Dominus Fustra
                 </Typography>
             </div>
