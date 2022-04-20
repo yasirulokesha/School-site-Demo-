@@ -9,10 +9,10 @@ export default function Landing(){
             <Navbar_Landing/>
             <Cover/>
             <Body>
-                <Stack direction="row">
-                    <Typography fontSize="20pt">"</Typography>
-                    <Typography fontSize="20pt">All for Richmond None for Self</Typography>
-                    <Typography fontSize="20pt">"</Typography>
+                <Stack direction='row'>
+                    <Typography fontSize='20pt'>"</Typography>
+                    <Typography fontSize='20pt'>All for Richmond None for Self</Typography>
+                    <Typography fontSize='20pt'>"</Typography>
                 </Stack>
             </Body>
             <Footer/>
